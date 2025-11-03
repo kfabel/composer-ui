@@ -1,0 +1,29 @@
+.package-tile {
+    display: flex;
+    flex-flow: column nowrap;
+    width: clamp(200px, 30%, 350px);
+    align-self: stretch;
+    justify-content: stretch;
+    align-items: stretch;
+    padding: 16px;
+
+    border: 2px solid #646cff;
+    border-radius: 20px;
+
+    .label {
+        max-width: 100%;
+    }
+
+    .body {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: stretch;
+        align-self: stretch;
+
+        .links {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+}

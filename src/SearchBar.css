@@ -1,0 +1,47 @@
+.search-bar {
+    display: flex;
+    align-self: stretch;
+    align-items: stretch;
+    justify-content: stretch;
+    label {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        
+        > .real-label {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 95%;
+            display: flex;
+            align-items: center;
+            transition: top 0.2s ease, transform 0.2s ease;
+        }
+    }
+    input {
+        display: flex;
+        border-radius: 20px 0 0 20px;
+        outline: none;
+        box-shadow: unset;
+        border: none;
+        padding: 12px;
+        min-width: 200px;
+        font-size: 1em;
+        align-self: stretch;
+    }
+
+    button {
+        padding: 12px;
+        border: none;
+        border-radius: 0 20px 20px 0;
+    }
+
+    &:has(input:is(:focus, :focus-visible, :focus-within, :not(:placeholder-shown))){
+        label > .real-label {
+            top: 0;
+            transform: translate(-50%, -60%) scale(0.8);
+        }
+    }
+    
+}
